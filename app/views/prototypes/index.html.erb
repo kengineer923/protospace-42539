@@ -1,0 +1,12 @@
+<main class="main">
+  <div class="inner">
+    <% if user_signed_in? %>
+      <div class="greeting">
+        <p>こんにちは、<%= current_user.name %>さん</p>
+      </div>
+    <% end %>
+    <div class="card__wrapper">
+        <%= render partial: "prototype", collection: @prototypes %>
+    </div>
+  </div>
+</main>
