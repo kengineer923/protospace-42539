@@ -2,7 +2,7 @@
   <div class="inner">
     <% if user_signed_in? %>
       <div class="greeting">
-        <p>こんにちは、<%= current_user.name %>さん</p>
+        <%= link_to "こんにちは、#{current_user.name}さん", user_path(current_user) %>
       </div>
     <% end %>
     <div class="card__wrapper">
